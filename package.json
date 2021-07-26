@@ -32,7 +32,8 @@
   ],
   "dependencies": {
     "command-line-args": "5.1.3",
-    "command-line-usage": "6.1.1"
+    "command-line-usage": "6.1.1",
+    "transliteration": "2.2.0"
   },
   "devDependencies": {
     "@types/node": "16.4.3",
