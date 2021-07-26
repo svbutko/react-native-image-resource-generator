@@ -1,0 +1,41 @@
+{
+  "name": "react-native-image-resource-generator",
+  "version": "1.0.0",
+  "description": "React Native image resource generator CLI tool",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svbutko/react-native-image-resource-generator.git"
+  },
+  "keywords": [
+    "react-native",
+    "image",
+    "resources",
+    "generator",
+    "cli-tool"
+  ],
+  "author": "Sergei Butko (https://twitter.com/@svbutko)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svbutko/react-native-image-resource-generator/issues"
+  },
+  "homepage": "https://github.com/svbutko/react-native-image-resource-generator#readme",
+  "contributors": [
+    {
+      "name": "Sergei Butko",
+      "url": "https://twitter.com/@svbutko"
+    }
+  ],
+  "dependencies": {
+    "command-line-args": "5.1.3",
+    "command-line-usage": "6.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "16.4.3",
+    "typescript": "4.3.5"
+  }
+}
