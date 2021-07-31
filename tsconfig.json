@@ -20,13 +20,15 @@
     "preserveConstEnums": true,
     "alwaysStrict": true,
     "strictNullChecks": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist"
   },
   "include": [
-    "src/**/*.ts",
+    "src/**/*",
   ],
   "exclude": [
     "node_modules",
-    "build",
+    "dist",
   ]
 }
