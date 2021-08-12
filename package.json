@@ -42,9 +42,9 @@
     "transliteration": "2.2.0"
   },
   "devDependencies": {
-    "@types/command-line-args": "5.0.1",
+    "@types/command-line-args": "5.2.0",
     "@types/command-line-usage": "5.0.2",
-    "@types/node": "16.4.8",
+    "@types/node": "16.6.0",
     "prettier": "2.3.2",
     "typescript": "4.3.5"
   }
