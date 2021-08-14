@@ -20,7 +20,8 @@ npm install --save-dev react-native-image-resource-generator
 ```
 
 ### Usage
-1. Create a folder and put all of your images there (sub-folders are supported too). Example:
+
+1. Create a folder and put all of your images there (_sub-folders are supported too_). Example:
 ```
 project
 │   package.json
@@ -53,14 +54,11 @@ export class ImageResources {
     static readonly back: ImageURISource = require("../../resources/images/back.png");
     static readonly bank: ImageURISource = require("../../resources/images/bank.png");
     static readonly bell: ImageURISource = require("../../resources/images/bell.png");
-    ...
 }
 ```
 4. After this use it anywhere you need:
 ```typescript jsx
-...
 <Image source={ImageResources.account} style={styles.icon} />
-...
 ```
 
 If you added or removed images, simply re-run the script to regenerate the file.
