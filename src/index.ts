@@ -24,7 +24,7 @@ async function run(): Promise<void> {
     `;
 
   await prepareFiles(cmdOptions.dir);
-  await collectEntries(cmdOptions.dir, path.join(path.dirname(cmdOptions.out), cmdOptions.read), true, resources);
+  await collectEntries(cmdOptions.dir, path.join(path.dirname(cmdOptions.out), cmdOptions.read || ""), true, resources);
 
   for (const resourceEntry of resources) {
     content += generateClassExport(resourceEntry.name, resourceEntry.entries);
