@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-resource-generator",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "description": "React Native image resource generator CLI tool",
   "main": "dist/index.js",
   "scripts": {
