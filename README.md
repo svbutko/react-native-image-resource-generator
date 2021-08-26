@@ -41,7 +41,7 @@ project
 2. Add script to your `package.json` scripts or type into terminal:
    * JavaScript: ```img-res-gen --dir=resources/images --out=src/common/ImageResources.js```
    * TypeScript ```img-res-gen --dir=resources/images --out=src/common/ImageResources.g.ts --ts=true```
-3. The result of the previous command will create a file with static image URI sources, which will look something simillar to this:
+3. The result of the previous command will create a file with static image URI sources, which will look something similar to this:
 ```typescript
 /* eslint-disable */
 import {ImageURISource} from "react-native";
