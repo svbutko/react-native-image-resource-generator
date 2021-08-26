@@ -52,7 +52,7 @@ async function collectEntries(dir: string, out: string, isRoot: boolean, result:
 }
 
 function generateClassExport(className: string, entries: FileEntry[]): string {
-  return `export class ${className} {${entries.map((entry) => getEntryDeclaration(entry)).join("\n")}}`;
+  return `\n\nexport class ${className} {\n${entries.map((entry) => getEntryDeclaration(entry)).join("\n")}\n}`;
 }
 
 function getEntryDeclaration(entry: FileEntry): string {
