@@ -5,7 +5,7 @@ import {IOptionDefinition, Options, OptionsEnum} from "./types";
 const optionDefinitions: IOptionDefinition[] = [
   {name: OptionsEnum.dir, alias: "d", type: String, description: "Relative directory path with images"},
   {name: OptionsEnum.out, alias: "o", type: String, description: "Output file path"},
-  {name: OptionsEnum.read, alias: "r", type: String, description: "Read directory path"},
+  {name: OptionsEnum.read, alias: "r", type: String, description: "Read directory path (optional)"},
   {
     name: OptionsEnum.ts,
     alias: "t",
