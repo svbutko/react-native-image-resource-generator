@@ -20,6 +20,7 @@ async function run(): Promise<void> {
 
   let content = `
         /* eslint:disable */
+        /* tslint:disable */
         ${cmdOptions.ts && 'import {ImageURISource} from "react-native";'}
     `;
 
