@@ -18,11 +18,7 @@ async function run(): Promise<void> {
 
   const resources: IResourceEntries[] = [];
 
-  let content = `
-        /* eslint:disable */
-        /* tslint:disable */
-        ${cmdOptions.ts && 'import {ImageURISource} from "react-native";'}
-    `;
+  let content = `/* eslint:disable */\n/* tslint:disable */${cmdOptions.ts && '\nimport {ImageURISource} from "react-native";'}`;
 
   await prepareFiles(cmdOptions.dir);
   await collectEntries(cmdOptions.dir, path.join(path.dirname(cmdOptions.out), cmdOptions.read || ""), true, resources);
