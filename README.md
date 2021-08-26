@@ -40,10 +40,11 @@ project
 ```
 2. Add script to your `package.json` scripts or type into terminal:
    * JavaScript: ```img-res-gen --dir=resources/images --out=src/common/ImageResources.js```
-   * TypeScript ```img-res-gen --dir=resources/images --out=src/common/ImageResources.g.ts --ts=true```
+   * TypeScript ```img-res-gen --dir=resources/images --out=src/common/ImageResources.g.ts --ts```
 3. The result of the previous command will create a file with static image URI sources, which will look something similar to this:
 ```typescript
-/* eslint-disable */
+/* eslint:disable */
+/* tslint:disable */
 import {ImageURISource} from "react-native";
 
 export class ImageResources {
@@ -65,12 +66,12 @@ If you added or removed images, simply re-run the script to regenerate the file.
 
 ### Options
 
-| Option (alias)    | Description                                                                 | Required | Example
-|-------------------|-----------------------------------------------------------------------------|----------|---------------------------------------
-| dir (d)           | Relative directory path with images                                         | `True`   | `img-res-gen --dir=resources/images`
-| out (o)           | Output file path                                                            | `True`   | `img-res-gen --out=src/common/ImageResources.g.ts`
-| read (r)          | Read directory path, adds additional path to a file's output required path  | `False`  | `img-res-gen --read=build/src`
-| ts (t)            | Should the output file be generated as a TypeScript file                    | `False`  | `img-res-gen --ts=true`
+| Option        | Description                                                                 | Required | Example
+|---------------|-----------------------------------------------------------------------------|----------|---------------------------------------
+| dir           | Relative directory path with images                                         | `True`   | `img-res-gen --dir=resources/images`
+| out           | Output file path                                                            | `True`   | `img-res-gen --out=src/common/ImageResources.g.ts`
+| read          | Read directory path, adds additional path to a file's output required path  | `False`  | `img-res-gen --read=build/src`
+| ts            | Should the output file be generated as a TypeScript file                    | `False`  | `img-res-gen --ts`
 
 
 
