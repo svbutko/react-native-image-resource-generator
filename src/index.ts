@@ -82,7 +82,7 @@ function toCamelCase(str: string): string {
 }
 
 function checkOptions(options: Options) {
-  if (options.dir == null || options.read == null || options.out == null) {
+  if (options.dir == null || options.out == null) {
     throw new Error(`Missing non-optional options.\nList of options:\n ${cmdUsage}`);
   }
 }
