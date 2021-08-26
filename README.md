@@ -1,7 +1,7 @@
 # react-native-image-resource-generator
 
 Generate code-friendly image URI source constants.
-To learn about use cases and what issues it solves check [this blog post]().
+To learn about use cases and what issues it solves check [this blog post](https://dev.to/svbutko/react-native-image-resource-generator-m14).
 
 ## Quick start
 
