@@ -1,5 +1,11 @@
 # react-native-image-resource-generator
 
+[![npm-version](https://img.shields.io/npm/v/react-native-image-resource-generator)](https://www.npmjs.com/package/react-native-image-resource-generator)
+[![npm-downloads](https://img.shields.io/npm/dt/react-native-image-resource-generator)](https://www.npmjs.com/package/react-native-image-resource-generator)
+
+[![GitHub Followers](https://img.shields.io/github/followers/svbutko?label=Follow%20%40svbutko&style=social)](https://github.com/svbutko)
+[![Twitter Follow](https://img.shields.io/twitter/follow/svbutko?label=Follow%20%40svbutko&style=social)](https://twitter.com/svbutko)
+
 Generate code-friendly image URI source constants.
 To learn about use cases and what issues it solves check [this blog post](https://dev.to/svbutko/react-native-image-resource-generator-m14).
 
