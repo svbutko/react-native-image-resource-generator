@@ -6,6 +6,8 @@
 [![GitHub Followers](https://img.shields.io/github/followers/svbutko?label=Follow%20%40svbutko&style=social)](https://github.com/svbutko)
 [![Twitter Follow](https://img.shields.io/twitter/follow/svbutko?label=Follow%20%40svbutko&style=social)](https://twitter.com/svbutko)
 
+<a href="https://www.buymeacoffee.com/svbutko"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=svbutko&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"></a>
+
 Generate code-friendly image URI source constants.
 To learn about use cases and what issues it solves check [this blog post](https://dev.to/svbutko/react-native-image-resource-generator-m14).
 
