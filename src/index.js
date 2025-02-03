@@ -87,6 +87,10 @@ async function collectEntries(dir, out, isRoot, result) {
   };
 
   for (const file of files) {
+    if (file === '.DS_Store') {
+      continue;
+    }
+
     const joinedPath = path.join(dir, file);
 
     if (fs.lstatSync(joinedPath).isDirectory()) {
