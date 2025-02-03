@@ -39,7 +39,6 @@ function assembleFileEntry(dir, out, fileName) {
     variableName: fileName
         .toLowerCase()
         .replace(/(.*)(.(png|jpg|jpeg|gif|bmp|svg))$/, "$1")
-        .replace(/^\d+/, ($0) => new Array($0.length + 1).join("_"))
         .replace(/\W+/g, "_"),
   };
 }
