@@ -6,11 +6,6 @@ const path = require("path");
 const commandLineArgs = require("command-line-args");
 const commandLineUsage = require("command-line-usage");
 
-
-run()
-  .then(() => console.log("Done"))
-  .catch((error) => console.error(`Error happened while generating resources:\n${error}`));
-
 const optionDefinitions = [
   {name: "dir", alias: "d", type: String, description: "Relative directory path with images"},
   {name: "out", alias: "o", type: String, description: "Output file path"},
@@ -25,6 +20,10 @@ const optionDefinitions = [
 
 const cmdOptions = commandLineArgs(optionDefinitions);
 const cmdUsage = commandLineUsage([{header: "Options", optionList: optionDefinitions}]);
+
+run()
+  .then(() => console.log("Done"))
+  .catch((error) => console.error(`Error happened while generating resources:\n${error}`));
 
 /**
  * @param {string} dir
