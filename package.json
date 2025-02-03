@@ -4,7 +4,6 @@
   "description": "React Native image resource generator CLI tool",
   "main": "bin/index.js",
   "scripts": {
-    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
@@ -24,7 +23,7 @@
     "generator",
     "cli-tool"
   ],
-  "author": "Sergei Butko (https://twitter.com/@svbutko)",
+  "author": "Sergei Butko (https://github.com/svbutko)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/svbutko/react-native-image-resource-generator/issues"
@@ -33,7 +32,7 @@
   "contributors": [
     {
       "name": "Sergei Butko",
-      "url": "https://twitter.com/@svbutko"
+      "url": "https://github.com/svbutko"
     },
     {
       "name": "Igor Antsiferov",
@@ -44,12 +43,5 @@
     "command-line-args": "^5.2.1",
     "command-line-usage": "^6.1.3",
     "transliteration": "^2.2.0"
-  },
-  "devDependencies": {
-    "@types/command-line-args": "^5.2.0",
-    "@types/command-line-usage": "^5.0.2",
-    "@types/node": "^17.0.36",
-    "prettier": "^2.6.2",
-    "typescript": "^4.7.2"
   }
 }
