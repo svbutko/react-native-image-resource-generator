@@ -175,7 +175,7 @@ async function prepareFiles(dir) {
     } else {
       const escapedFile = transliteration.transliterate(file, transliterationOptions)
         .replace(/[,]/g, ".")
-        .replace(/[^A-Za-z0-9_@.]/g, "_");
+        .replace(/[^A-Za-z_@.]/g, "_");
 
       if (escapedFile !== file) {
         fs.renameSync(joinedPath, path.join(dir, escapedFile));
