@@ -6,11 +6,6 @@ const path = require("path");
 const commandLineArgs = require("command-line-args");
 const commandLineUsage = require("command-line-usage");
 
-
-run()
-  .then(() => console.log("Done"))
-  .catch((error) => console.error(`Error happened while generating resources:\n${error}`));
-
 const optionDefinitions = [
   {name: "dir", alias: "d", type: String, description: "Relative directory path with images"},
   {name: "out", alias: "o", type: String, description: "Output file path"},
@@ -26,6 +21,12 @@ const optionDefinitions = [
 const cmdOptions = commandLineArgs(optionDefinitions);
 const cmdUsage = commandLineUsage([{header: "Options", optionList: optionDefinitions}]);
 
+const entriesRegex = new RegExp("^((?!@).)*$");
+
+run()
+  .then(() => console.log("Done"))
+  .catch((error) => console.error(`Error happened while generating resources:\n${error}`));
+
 /**
  * @param {string} dir
  * @param {string} out
@@ -38,7 +39,6 @@ function assembleFileEntry(dir, out, fileName) {
     variableName: fileName
         .toLowerCase()
         .replace(/(.*)(.(png|jpg|jpeg|gif|bmp|svg))$/, "$1")
-        .replace(/^\d+/, ($0) => new Array($0.length + 1).join("_"))
         .replace(/\W+/g, "_"),
   };
 }
@@ -86,14 +86,16 @@ async function collectEntries(dir, out, isRoot, result) {
     entries: [],
   };
 
-  const regex = new RegExp("^((?!@).)*$");
-
   for (const file of files) {
+    if (file === '.DS_Store') {
+      continue;
+    }
+
     const joinedPath = path.join(dir, file);
 
     if (fs.lstatSync(joinedPath).isDirectory()) {
       await collectEntries(joinedPath, out, false, result);
-    } else if (regex.exec(file)) {
+    } else if (entriesRegex.exec(file)) {
       item.entries.push(assembleFileEntry(dir, out, file));
     }
   }
@@ -175,7 +177,7 @@ async function prepareFiles(dir) {
     } else {
       const escapedFile = transliteration.transliterate(file, transliterationOptions)
         .replace(/[,]/g, ".")
-        .replace(/[^A-Za-z_@.]/g, "_");
+        .replace(/[^A-Za-z0-9_@.]/g, "_");
 
       if (escapedFile !== file) {
         fs.renameSync(joinedPath, path.join(dir, escapedFile));
