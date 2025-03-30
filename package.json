@@ -40,8 +40,8 @@
     }
   ],
   "dependencies": {
-    "command-line-args": "^5.2.1",
-    "command-line-usage": "^6.1.3",
-    "transliteration": "^2.2.0"
+    "command-line-args": "^6.0.1",
+    "command-line-usage": "^7.0.3",
+    "transliteration": "^2.3.5"
   }
 }
